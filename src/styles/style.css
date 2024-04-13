@@ -10,35 +10,53 @@
   background-color: #252525;
   position: sticky;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   box-shadow: #26B68B 0px 5px 15px;
 }
-.navbar .logo {
+.navbar .nav-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70px;
+  outline: 2px solid blue;
+}
+.navbar .nav-header .logo {
   width: 70px;
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.navbar .hamburger-wrapper {
+.navbar .nav-header .hamburger-wrapper {
   width: 100%;
   margin-inline: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
-.navbar .hamburger-wrapper .hamburger-nav {
+.navbar .nav-header .hamburger-wrapper .hamburger-nav {
   width: 50px;
-  height: 70px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   float: right;
 }
-.navbar .hamburger-wrapper .hamburger-nav .bar-1, .navbar .hamburger-wrapper .hamburger-nav .bar-2, .navbar .hamburger-wrapper .hamburger-nav .bar-3 {
+.navbar .nav-header .hamburger-wrapper .hamburger-nav .bar {
   width: 30px;
   height: 4px;
   background-color: #26B68B;
   border-radius: 10px;
   margin-block: 3px;
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+.navbar .hamburger-menu a {
+  color: #26B68B;
+}
+.navbar .hamburger-menu li {
+  list-style: none;
 }
 .navbar .nav-links {
   display: flex;
@@ -49,6 +67,9 @@
 }
 .navbar .nav-links a {
   color: #26B68B;
+  font-family: "Iner", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
 }
 .navbar .nav-links li {
   float: left;
@@ -57,12 +78,21 @@
 }
 
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
-  .navbar .nav-links {
+  .navbar .nav-header .nav-links {
     display: none;
+  }
+  .navbar .hamburger-wrapper .hamburger-nav.isActive .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar .hamburger-wrapper .hamburger-nav.isActive .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .navbar .hamburger-wrapper .hamburger-nav.isActive .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
   }
 }
 @media only screen and (min-device-width: 480px) {
-  .navbar .hamburger-wrapper {
+  .navbar .nav-header .hamburger-wrapper {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */
