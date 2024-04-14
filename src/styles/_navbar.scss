@@ -3,19 +3,22 @@ $primary-bg: #252525;
 .navbar {
     width: 100%;
     height: 70px;
-    outline: 2px solid green;
-    background-color: $primary-bg;
+    // outline: 2px solid green;
+    background-color: #202020;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
     position: sticky;
     display: flex;
     flex-direction: column;
-    box-shadow: #26B68B 0px 5px 15px;
+    // box-shadow: #26B68B 0px 5px 15px;
+    z-index: 2;
+// 
 
     .nav-header {
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 70px;
-        outline: 2px solid blue;
+        outline: 1px solid black;
 
     .logo {
         width: 70px;
@@ -24,6 +27,12 @@ $primary-bg: #252525;
         display: flex;
         justify-content: center;
         align-items: center;
+        color: #26B68B;
+        font-family:"Inter", sans-serif;
+        font-weight: 700;
+        Font-style: Bold;
+        font-size: 28px;
+        margin-left: 20px;
     
     }
     .hamburger-wrapper {
@@ -54,7 +63,7 @@ $primary-bg: #252525;
             border-radius: 10px;
             margin-block: 3px;
             transition: all 0.4s ease-in-out;
-            z-index: -1;
+            z-index: -2;
         }
 
      
@@ -64,12 +73,29 @@ $primary-bg: #252525;
 
 .hamburger-menu {
 
+    width: 100%;
+    // outline: 2px solid violet;
+    // display: none;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.45s ease-in;
+    opacity: 0;
+    visibility: hidden;
+
     a {
         color: #26B68B;
+        font-family:"Inter", sans-serif;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 24px;
     }
     
     li {
+        height: 125px;
+        width: 100%;
         list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
 }
@@ -80,10 +106,11 @@ $primary-bg: #252525;
         justify-content: end;
         width: 100%;
         align-items: center;
+        // padding-inline: 20px;
         
         a {
             color: #26B68B;
-            font-family:"Iner", sans-serif;
+            font-family:"Inter", sans-serif;
             font-weight: 700;
             font-style: Bold;
         }
@@ -100,7 +127,7 @@ $primary-bg: #252525;
 //mobile first 
 
 //mobile screen portrait 
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
+@media screen and (max-device-width: 479px) and (orientation: portrait) {
 
         .navbar .nav-header .nav-links  {
             display: none;
@@ -115,6 +142,11 @@ $primary-bg: #252525;
         .navbar .hamburger-wrapper .hamburger-nav.isActive .bar:nth-child(3) {
             transform: translateY(-10px) rotate(-45deg);
         }
+
+        .navbar .hamburger-menu.isActive {
+            opacity: 100%;
+            visibility: visible;
+        }
     
 
 }
@@ -125,4 +157,10 @@ $primary-bg: #252525;
         display: none;
     }
 
+
 }
+
+// @media only screen and (min-device-width: 900px) {
+
+
+// }

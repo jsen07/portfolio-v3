@@ -19,11 +19,16 @@ const Navbar = () => {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"></link>
         <header className='nav-header'>
-        <div className='logo'> Logo </div>
+        <div className='logo'> [JD] </div>
 
         {/* hamburger menu */}
         <div className='hamburger-wrapper'>
-        <div className='hamburger-nav' onClick={(e) => { e.target.classList.toggle('isActive')}}>
+        <div className='hamburger-nav' onClick={(e) => { 
+            e.target.classList.toggle('isActive')
+            const menu = document.querySelector('.hamburger-menu');
+            menu.classList.toggle('isActive');
+            
+        }}>
             <div className='bar'></div>
             <div className='bar'></div>
             <div className='bar'></div>
