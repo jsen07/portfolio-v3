@@ -1,17 +1,7 @@
 import React from 'react'
 
-
 const Navbar = () => {
 
-    const hamburger = () => {
-        // const hamburgerClick = document.querySelector('.hamburger-nav');
-
-        // hamburgerClick.addEventListener('click', () => {
-        //     hamburgerClick.classList.toggle('isActive');
-        // });
-        console.log('click');
-
-    }
 
   return (
     <section className='navbar'>
