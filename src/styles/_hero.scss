@@ -42,7 +42,7 @@
         position: relative;
         width: 350px;
         height: 325px;
-        outline: 2px solid green;
+        // outline: 2px solid green;
         margin-right: 50px;
        
 
@@ -90,7 +90,7 @@
 
 .sub-header {
     width: 100%;
-    height: 375px;
+    height: 100%;
     // outline: 2px solid red;
     color: white;
     font-family:"Inter", sans-serif;
@@ -105,6 +105,7 @@
         width: 90%;
         height: 100%;
         // outline: 2px solid blue;
+        margin-bottom: 190px;
 
     h1 {
         margin-bottom: 30px;
@@ -114,8 +115,92 @@
         color: #26B68B;
     }
 }
+.profile-links {
+    width: 100%;
+    align-self: baseline;
+    margin-top: 50px;
+    
+    // outline: 2px solid green;
 
+    li {
+   
+        list-style: none;
+        display:inline-flex;
+        margin:10px;
+        width: 55px;
+        height: 55px;
+        // outline: 2px solid black;
+        border: 2px solid #26B68B;
+        // padding: 5px;
+        border-radius: 7.5px;
+        align-items: center;
+        justify-content: center;
+        background-color: #111111;
+        // padding-block: 3px;
+        box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.4);
 
+        // :hover {
+        //     opacity: 0.5;
+        // }
+
+    }
+
+    li:hover {
+       opacity: 0.5;
+    }
+
+    a {
+        // outline: 2px solid green;
+        // padding-inline:30px;
+        // padding-block: 10px;
+        text-decoration: none;
+    }
+
+    #cv {
+        background-image: url(../components/svg/resume2.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    #gh {
+        background-image: url(../components/svg/github.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #linkedin {
+        background-image: url(../components/svg/linkedin.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #con {
+        background-image: url(../components/svg/contact.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+}
+
+}
+}
+
+@media only screen and (max-device-width: 375px) {
+
+    .hero-section {
+        height: 145vh; 
+    .hero-container .avatar-container{
+        // outline: 2px solid green;
+        width: 275px;
+        height: 275px;
+    }
 }
 }
 
@@ -186,7 +271,7 @@
 
 }
 
-@media only screen and (min-device-width: 1024px) {
+@media only screen and (min-device-width: 1024px ) and (orientation: landscape) {
 
     .hero-section {
         flex-direction: row;

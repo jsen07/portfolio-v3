@@ -6,7 +6,7 @@ $primary-bg: #252525;
     // outline: 2px solid green;
     background-color: #202020;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
-    position: sticky;
+    position: fixed;
     display: flex;
     flex-direction: column;
     // box-shadow: #26B68B 0px 5px 15px;
@@ -87,6 +87,7 @@ $primary-bg: #252525;
         font-weight: 700;
         font-style: Bold;
         font-size: 24px;
+        text-decoration: none;
     }
     
     li {
@@ -113,6 +114,8 @@ $primary-bg: #252525;
             font-family:"Inter", sans-serif;
             font-weight: 700;
             font-style: Bold;
+            text-decoration: none;
+            
         }
         
         li {

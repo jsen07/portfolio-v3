@@ -27,7 +27,7 @@ const Navbar = () => {
         </div>
         {/*       desktop nav */}
         <div className='nav-links'>
-            <li><a> About me </a></li>
+            <li><a href="#aboutme-section"> About me </a></li>
             <li><a> Projects </a></li>
             <li><a> Contact </a></li>
             
@@ -35,7 +35,7 @@ const Navbar = () => {
         </header>
 
         <span className='hamburger-menu'>
-            <li><a> About me </a></li>
+            <li><a href="#aboutme-section"> About me </a></li>
             <li><a> Projects </a></li>
             <li><a> Contact </a></li>
 

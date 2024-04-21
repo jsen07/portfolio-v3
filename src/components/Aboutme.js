@@ -44,7 +44,7 @@ const Aboutme = () => {
         );
 
   return (
-    <section className='aboutme-section'>
+    <section id='aboutme-section'>
 
         <div className='aboutme-container'>
 

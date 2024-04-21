@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -8,7 +9,7 @@
   height: 70px;
   background-color: #202020;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
-  position: sticky;
+  position: fixed;
   display: flex;
   flex-direction: column;
   z-index: 2;
@@ -71,6 +72,7 @@
   font-weight: 700;
   font-style: Bold;
   font-size: 24px;
+  text-decoration: none;
 }
 .navbar .hamburger-menu li {
   height: 125px;
@@ -92,6 +94,7 @@
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: Bold;
+  text-decoration: none;
 }
 .navbar .nav-links li {
   float: left;
@@ -159,7 +162,6 @@
   position: relative;
   width: 350px;
   height: 325px;
-  outline: 2px solid green;
   margin-right: 50px;
 }
 .hero-section .hero-container .avatar-container .square {
@@ -195,7 +197,7 @@
 }
 .hero-section .sub-header {
   width: 100%;
-  height: 375px;
+  height: 100%;
   color: white;
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -208,6 +210,7 @@
 .hero-section .sub-header .sub-header-content {
   width: 90%;
   height: 100%;
+  margin-bottom: 190px;
 }
 .hero-section .sub-header .sub-header-content h1 {
   margin-bottom: 30px;
@@ -215,7 +218,64 @@
 .hero-section .sub-header .sub-header-content p {
   color: #26B68B;
 }
+.hero-section .sub-header .profile-links {
+  width: 100%;
+  align-self: baseline;
+  margin-top: 50px;
+}
+.hero-section .sub-header .profile-links li {
+  list-style: none;
+  display: inline-flex;
+  margin: 10px;
+  width: 55px;
+  height: 55px;
+  border: 2px solid #26B68B;
+  border-radius: 7.5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
+  box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.4);
+}
+.hero-section .sub-header .profile-links li:hover {
+  opacity: 0.5;
+}
+.hero-section .sub-header .profile-links a {
+  text-decoration: none;
+}
+.hero-section .sub-header .profile-links #cv {
+  background-image: url(../components/svg/resume2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.hero-section .sub-header .profile-links #gh {
+  background-image: url(../components/svg/github.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.hero-section .sub-header .profile-links #linkedin {
+  background-image: url(../components/svg/linkedin.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.hero-section .sub-header .profile-links #con {
+  background-image: url(../components/svg/contact.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
+@media only screen and (max-device-width: 375px) {
+  .hero-section {
+    height: 145vh;
+  }
+  .hero-section .hero-container .avatar-container {
+    width: 275px;
+    height: 275px;
+  }
+}
 @media only screen and (min-device-width: 600px) {
   .hero-section .hero-container .avatar-container {
     width: 400px;
@@ -253,7 +313,7 @@
     height: 100%;
   }
 }
-@media only screen and (min-device-width: 1024px) {
+@media only screen and (min-device-width: 1024px) and (orientation: landscape) {
   .hero-section {
     flex-direction: row;
     padding-top: 75px;
@@ -293,7 +353,7 @@
     font-size: 45px;
   }
 }
-.aboutme-section {
+#aboutme-section {
   width: 100%;
   height: 100%;
   outline: 2px solid green;
@@ -303,24 +363,24 @@
   justify-content: center;
   align-items: center;
 }
-.aboutme-section .aboutme-container {
+#aboutme-section .aboutme-container {
   width: 90%;
   height: 100%;
   outline: 2px solid black;
   display: flex;
   flex-direction: column;
 }
-.aboutme-section .aboutme-container h1, .aboutme-section .aboutme-container p {
+#aboutme-section .aboutme-container h1, #aboutme-section .aboutme-container p {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: Bold;
   margin-block: 20px;
 }
-.aboutme-section .aboutme-container h1 {
+#aboutme-section .aboutme-container h1 {
   font-size: 30px;
   color: white;
 }
-.aboutme-section .aboutme-container #tech-stack-container .tech-box {
+#aboutme-section .aboutme-container #tech-stack-container .tech-box {
   width: 150px;
   height: 100px;
   display: inline-flex;
